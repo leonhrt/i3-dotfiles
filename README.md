@@ -7,6 +7,8 @@ My dotfiles for i3
 - pamixer
 - playerctl
 - alacritty
+- starship
+- rofi
 
 ### > [!NOTE]
 > This config is for a dual monitor setup (2x 1920x1080 144hz monitors)
