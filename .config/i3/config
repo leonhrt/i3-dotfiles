@@ -15,6 +15,7 @@ set $control Control
 set $term alacritty
 set $main_monitor DP-0
 set $secondary_monitor DP-2
+set $browser brave-browser
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -59,7 +60,7 @@ bindsym Control+Prior exec --no-startup-id pamixer -i 5 && $refresh_i3status
 # Decrease by 5% the volume using pamixer
 bindsym Control+Next exec --no-startup-id pamixer -d 5 && $refresh_i3status
 # Mute volume using pamixer
-bindsym Control+masculine exec --no-startup-id pamixer --toggle-mute
+bindsym Control+masculine exec --no-startup-id pamixer --toggle-mute && $refresh_i3status
 # Next media using playerctl
 bindsym Control+exclamdown exec --no-startup-id playerctl next && $refresh_i3status
 # Previous media using playerctl
@@ -85,7 +86,10 @@ bindsym $mod+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 
 # Start rofi (custom theme)
-bindsym $mod+d exec --no-startup-id /home/leonhrt/.config/rofi/launchers/type-6/launcher.sh
+bindsym $mod+d exec --no-startup-id /home/leonhrt/.config/rofi/launchers/type-1/launcher.sh
+
+# Open browser
+bindsym $mod+b exec --no-startup-id $browser
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -225,8 +229,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Control+$alt+r exec reboot
-bindsym $mod+Control+$alt+p exec poweroff
+bindsym $mod+Control+$alt+r exec sudo reboot
+bindsym $mod+Control+$alt+p exec sudo poweroff
 
 #bindsym $mod+p exec --no-startup-id /home/leonhrt/.config/i3/scripts/toggle_picom.sh
 bindsym $mod+p exec --no-startup-id $HOME/.config/i3/Scripts/toggle_picom.sh

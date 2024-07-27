@@ -17,16 +17,16 @@ WINIT_X11_SCALE_FACTOR = "1.2"
 size = 10
 
 [font.normal]
-family = "ZedMono Nerd Font"
+family = "DejaVuSansM Nerd Font"
 style = "Regular"
 
-[font.bold]
-family = "ZedMono Nerd Font"
-style = "Bold"
+#[font.bold]
+#family = "ZedMono Nerd Font"
+#style = "Bold"
 
-[font.italic]
-family = "ZedMono Nerd Font"
-style = "Italic"
+#[font.italic]
+#family = "ZedMono Nerd Font"
+#style = "Italic"
 
 [window.padding]
 x = 2
