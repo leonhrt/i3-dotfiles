@@ -1,5 +1,8 @@
 import = ["/home/leonhrt/.config/alacritty/tokyodark.toml"]
 
+[shell]
+program = "/usr/bin/zsh"
+
 [window]
 opacity = 0.9
 

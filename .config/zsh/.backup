@@ -1,0 +1,19 @@
+### ----- EXPORTS ----- ###
+export BROWSER="brave"
+export EDITOR="nvim"
+export VISUAL="code"
+
+# Starship prompt
+eval "$(starship init zsh)"
+
+# History
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.config/zsh/.zsh_history
+
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' gain-privileges 1
+
