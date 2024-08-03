@@ -1,0 +1,4 @@
+#!/bin/sh
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+exec /home/leonhrt/.nix-profile/bin/mangohud
+exit 0
