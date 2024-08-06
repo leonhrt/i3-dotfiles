@@ -8,7 +8,7 @@ StartLimitBurst=3
 StartLimitIntervalSec=60
 
 [Service]
-ExecStart=/home/leonhrt/.config/bin/picom-wrapper
+ExecStart=/usr/local/bin/picom
 ExecReload=/usr/bin/killall picom
 # Try to restart no matter how the process ended
 Restart=always

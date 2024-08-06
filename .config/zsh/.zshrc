@@ -13,17 +13,12 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-### ----- PLUGINS ----- ###
-## --- AUTOSUGGESTIONS --- ##
-
-
-## --- SYNTAX-HIGHLIGHTING --- ##
 
 
 ### ----- ALIASES ----- ###
 ## --- BATCAT --- ###
-alias cat="batcat --paging=never"
-alias catp="batcat"
+alias cat="bat --paging=never"
+alias catp="bat"
 
 ## --- EZA --- ##
 alias ls="eza -a --group-directories-first --icons=always"
@@ -61,3 +56,21 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ### ----- BINDINGS ----- ###
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+### ----- HOMEBREW ----- ###
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+### ----- PLUGINS ----- ###
+## --- AUTOSUGGESTIONS --- ##
+AUTOSUGGESTIONS=/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f "$AUTOSUGGESTIONS" ]; then
+  source $AUTOSUGGESTIONS
+fi
+
+## --- SYNTAX-HIGHLIGHTING --- ##
+SYNTAX_HIGHLIGHTING=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f "$SYNTAX_HIGHLIGHTING" ]; then
+  source $SYNTAX_HIGHLIGHTING
+fi
+
+
