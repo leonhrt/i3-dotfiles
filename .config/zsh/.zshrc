@@ -56,19 +56,17 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ### ----- BINDINGS ----- ###
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-
-### ----- HOMEBREW ----- ###
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+bindkey "\e^?" backward-kill-word
 
 ### ----- PLUGINS ----- ###
 ## --- AUTOSUGGESTIONS --- ##
-AUTOSUGGESTIONS=/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+AUTOSUGGESTIONS=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [ -f "$AUTOSUGGESTIONS" ]; then
   source $AUTOSUGGESTIONS
 fi
 
 ## --- SYNTAX-HIGHLIGHTING --- ##
-SYNTAX_HIGHLIGHTING=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [ -f "$SYNTAX_HIGHLIGHTING" ]; then
   source $SYNTAX_HIGHLIGHTING
 fi
